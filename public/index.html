@@ -16,6 +16,8 @@
 		<!-- Bootstrap js with popper -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -32,9 +34,6 @@
       }
     </style>
 
-    
-    <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
   </head>
   <body class="text-center">
 	<img src="logo.png" class="rounded mx-auto d-block" alt="MT logo" width="100" height="100">
@@ -44,10 +43,11 @@
 
 	<form class="form-main" method="POST" action="/upload" enctype="multipart/form-data">
 			<div class="input-group p-3">
-			<input type="file" class="form-control" id="formFile" name="profile-file" required="required">
+			<input type="file" class="form-control" id="formFile" name="profile-file" required="required" accept="image/*">
 		</div>
 		<button type="submit" class="btn btn-primary">Upload</button>
 	</form>
     
+		<script src="index.js"></script>
   </body>
 </html>
