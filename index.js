@@ -35,7 +35,7 @@ app.post('/upload', upload.single('profile-file'), function (req, res, next) {
 	cdnPath = cdnPath.replace('uploads','');
 
 	res.render('res.ejs', {
-    url: `https://image-uploads.cdn.webdesign.maccastech.com.au/cdn${cdnPath}`
+    url: `https://imgcdn.maccastech.com.au/cdn${cdnPath}`
   });
 })
    
