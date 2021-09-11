@@ -1,5 +1,5 @@
-// Made by Charlie McMahon, Copyright 2021.
-// 11th September 2021
+// Made by Charlie McMahon, Copyright Macca's Tech, 2021
+// imagecdn.maccastech.com.au
 
 var express = require('express')
 var multer  = require('multer')
@@ -37,6 +37,10 @@ app.post('/upload', upload.single('profile-file'), function (req, res, next) {
 	res.render('res.ejs', {
     url: `https://imgcdn.maccastech.com.au/cdn${cdnPath}`
   });
+})
+
+app.get('/ping', function (req, res) {
+  res.send('<h1>Pong!</h1>')
 })
    
 
