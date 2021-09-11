@@ -13,8 +13,8 @@ var storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, './uploads')
     },
-    filename: function (req, file, cb) {
-      cb(null, `image-${(Math.round(Date.now() / 1000))}.${file.originalname.split('.').pop()}`)
+    filename: function (req, file, cb) { // Make sure that there aren't any duplicates
+      cb(null, `image-${(Math.round(Date.now() / 1000))}.${file.originalname.split('.').pop()}`) // Set filename to the original file name + current time.
     }
 })
 var upload = multer({ storage: storage })
