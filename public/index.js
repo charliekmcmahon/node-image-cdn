@@ -1,3 +1,5 @@
+console.log('index.js running.');
+
 function copy() {
   /* Get the text field */
   var copyText = document.getElementById("img-link");
